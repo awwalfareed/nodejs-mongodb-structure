@@ -6,6 +6,9 @@ const userSchema = mongoose.Schema({
     },
     LastName:{
         type: String
+    },
+    id:{
+        type:Number
     }
 })
 
