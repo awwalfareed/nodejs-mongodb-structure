@@ -10,12 +10,12 @@ dotenv.config();
 connectDB();
 
 app.get("/", (req,res) => {
-    res.send("API is running...");
+    res.send("API is running..."); 
 });
 
 app.use("/api/user", inventoryRoutes)
-app.use("/api/data",orderRoutes)
-app.use("/api/details",courseRoutes)
+app.use("/api/data", orderRoutes)
+app.use("/api/details", courseRoutes)
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, console.log(`server is running on localhost:${PORT}`));

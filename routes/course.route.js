@@ -4,10 +4,10 @@ const courseController = require('../controllers/course.controller');
 const router = express.Router();
 
 // router.get("/agggregate",individulaController.aggresult)
-// router.post("/course",courseController.createCourse)
-router.post("/course",courseController.updateCourse)
-// router.post("/course",courseController.readCourse)
-// router.post("/course",courseController.deleteCourse)
+router.post("/createCourse",courseController.createCourse)
+router.patch("/updateCourse",courseController.updateCourse)
+router.get("/readCourse",courseController.readCourse)
+router.delete("/deleteCourse",courseController.deleteCourse)
 
 
 

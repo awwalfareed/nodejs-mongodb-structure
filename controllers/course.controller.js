@@ -27,8 +27,8 @@ module.exports = {
         try {
             console.log("inside course model");
 
-            const course =await courseModel.findOneAndUpdate({ name: "ashish" },
-            { $set: { CID: 11113 } })
+            const course =await courseModel.findOneAndUpdate({ name: req.body.name },
+            { $set: { description: req.body.description } })
 
             res.send(course)
         } catch (error) {
@@ -40,7 +40,7 @@ module.exports = {
         try {
             console.log("inside course model");
 
-            const course =await courseModel.find({})
+            const course =await courseModel.find({CID: req.body.CID})
 
             res.send(course)
         } catch (error) {
@@ -52,7 +52,7 @@ module.exports = {
         try {
             console.log("inside course model");
 
-            const course =await courseModel.deleteOne({CID:3})
+            const course =await courseModel.deleteOne({CID:req.body.CID})
 
             res.send(course)
         } catch (error) {
